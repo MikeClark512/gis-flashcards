@@ -196,8 +196,7 @@ public class GISFrame extends JFrame {
 			parameter.put("ijn", "0");
 			parameter.put("num", "10");
 			GoogleSearch search = new GoogleSearch(parameter);
-			GoogleSearch.serp_api_key_default = System.getenv("API_KEY");
-//			GoogleSearch.api_key_default = System.getenv("API_KEY");
+			GoogleSearch.serp_api_key_default = System.getenv("SERP_API_KEY");
 			search.buildQuery("/search", "html");
 			JsonObject results = search.getJson();
 
